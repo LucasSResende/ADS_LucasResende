@@ -32,5 +32,23 @@ public class AtletaTeste {
 		System.out.println(nadador.aposentado);
 	}
 	
+	@Test
+	void testarCiclista() {
+		Ciclista ciclista = new Ciclista("Edson", 44, 85, false);
+		System.out.println("Está aposentado");
+		if (ciclista.aposentado) {
+			System.out.println("sim");
+			
+			
+		} else {
+			System.out.println("não");
+
+		}
+		ciclista.pedalar();
+		ciclista.envelhecer();
+		ciclista.aposentar();
+		System.out.println("Agora já está aposentado?");
+		System.out.println(ciclista.aposentado ? "Sim" : "Não");
+	}
 
 }
