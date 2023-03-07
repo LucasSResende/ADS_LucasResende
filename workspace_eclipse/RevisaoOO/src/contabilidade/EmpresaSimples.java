@@ -1,6 +1,13 @@
 package contabilidade;
 
 public class EmpresaSimples implements Tributavel{
+	
+
+	 
+		
+	
+	private static final Double TAXA_ISS_EMPRESA_SIMPLES = 0.08;
+	private static final Double TAXA_IR_EMPRESA_SIMPLES = 0.15;
 	Double faturamentoMensal;
 
 	public EmpresaSimples(Double faturamentoMensal) {
@@ -10,13 +17,13 @@ public class EmpresaSimples implements Tributavel{
 
 	@Override
 	public Double getValorIR() {
-		return this.faturamentoMensal * 0.15;
+		return this.faturamentoMensal * TAXA_IR_EMPRESA_SIMPLES;
 
 	}
 
 	@Override
 	public Double getValorISS() {
-		return this.faturamentoMensal * 0.08;
+		return this.faturamentoMensal * TAXA_ISS_EMPRESA_SIMPLES;
 
 	}
 	
