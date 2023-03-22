@@ -48,7 +48,7 @@ public class SobreCollection_2 {
 		System.out.println("");
 		System.out.println(">> entendendo o clear():");
 		
-//		imprimirStatusDaColecao(engenharias); Não entendi
+//		imprimirStatusDaColecao(engenharias);
 		
 		System.out.println("...invocando clear()");
 		engenharias.clear();
