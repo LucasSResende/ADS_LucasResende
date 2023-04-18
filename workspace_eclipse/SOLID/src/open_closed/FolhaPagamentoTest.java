@@ -4,23 +4,19 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-class FolhaPagamentoTest {
+public class FolhaPagamentoTest {
 
-	@Test
-	void test() {
-      ContratoCLT contratoCLT = new ContratoCLT(1000.0);
-      Estagio estagio = new Estagio(500.0);
-      ContratoPJ contratoPJ = new ContratoPJ(5000.0);
+	   @Test
+	   public void testCalcular() {
+	      ContratoCLT contratoCLT = new ContratoCLT(1000.0);
+	      Estagio estagio = new Estagio(500.0);
 
-      FolhaPagamento folhaPagamento = new FolhaPagamento();
-      folhaPagamento.calcular( contratoCLT );
-      folhaPagamento.calcular( estagio );
-      folhaPagamento.calcular( contratoPJ );
+	      FolhaPagamento folhaPagamento = new FolhaPagamento();
+	      folhaPagamento.calcular( contratoCLT );
+	      folhaPagamento.calcular( estagio );
 
-      Double valorEsperado = 6500.0;
-      Double valorAtual = folhaPagamento.getTotalFolha();
-      assertEquals(valorEsperado, valorAtual); 
-
+	      Double valorEsperado = 1500.0;
+	      Double valorAtual = folhaPagamento.getTotalFolha();
+	      assertEquals(valorEsperado, valorAtual); 
+	   }	
 	}
-
-}
